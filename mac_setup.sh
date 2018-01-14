@@ -17,17 +17,33 @@ brew tap caskroom/cask
 # install applications
 brew install git
 brew install npm
+# TODO: install python3
+
 brew cask install visual-studio-code
 # brew cask install android-studio
 brew cask install firefox
 brew cask install google-chrome
 brew cask install spectacle
+brew cask install alfred
 brew cask install vlc
 brew cask install slack
 brew cask install spotify
 brew cask install steam
-brew cask install itch
+brew cask install itch # this will also install butler cli
+
 # mas install 497799835 # Xcode
+
+# nvm doesn't support install through Homebrew
+curl x https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
+nvm install node
+
+npm install --global surge
+# TODO: install TypeScript?
+# TODO: install gulp?
+# TODO: linters? prettier?
+
+# install rvm
+# TODO: setup ruby, any gems?
 
 # configure git
 git config --global user.name "Ryan Kubik"
@@ -43,19 +59,17 @@ git config --global credential.helper osxkeychain
 # copy dotfiles from github
 curl https://raw.githubusercontent.com/rmkubik/dotfiles/.bash_profile >> ~/.bash_profile
 curl https://raw.githubusercontent.com/rmkubik/dotfiles/.inputrc >> ~/.inputrc
-# curl ~/.ssh
-# curl ~/.duti
-# curl ~/.gitconfig instead or above --global commands?
-
-# nvm doesn't support install through Homebrew
-curl x https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
-nvm install node
+# curl ~/.ssh TODO
+# curl ~/.duti TODO
+# curl ~/.gitconfig instead or above --global commands? TODO
 
 # configure SSH keys
+# TODO: setup work & personal keys
 
 # style the terminal
 git clone https://github.com/lysyi3m/osx-terminal-themes
 open AdventureTime.terminal # Shell > Use Settings as Default to save
+# TODO: Get the apple script for saving the theme
 
 # script for tab completion in git commands
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
