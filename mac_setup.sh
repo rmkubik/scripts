@@ -67,7 +67,7 @@ curl https://raw.githubusercontent.com/rmkubik/dotfiles/.inputrc >> ~/.inputrc
 # TODO: setup work & personal keys
 
 # style the terminal
-git clone https://github.com/lysyi3m/osx-terminal-themes
+git clone https://github.com/lysyi3m/osx-terminal-themes ~/git/osx-terminal-themes/
 open AdventureTime.terminal # Shell > Use Settings as Default to save
 # TODO: Get the apple script for saving the theme
 
