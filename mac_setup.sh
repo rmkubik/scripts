@@ -42,6 +42,7 @@ git config --global credential.helper osxkeychain
 
 # copy dotfiles from github
 curl https://raw.githubusercontent.com/rmkubik/dotfiles/.bash_profile >> ~/.bash_profile
+curl https://raw.githubusercontent.com/rmkubik/dotfiles/.inputrc >> ~/.inputrc
 # curl ~/.ssh
 # curl ~/.duti
 # curl ~/.gitconfig instead or above --global commands?
