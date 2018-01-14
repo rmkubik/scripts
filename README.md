@@ -1,2 +1,2 @@
 # scripts
-A collection of scripts I use
+A collection of scripts
