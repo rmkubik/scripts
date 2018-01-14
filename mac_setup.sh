@@ -30,6 +30,7 @@ brew cask install slack
 brew cask install spotify
 brew cask install steam
 brew cask install itch # this will also install butler cli
+# brew cask install arduino
 
 # mas install 497799835 # Xcode
 
@@ -38,7 +39,7 @@ curl x https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bas
 nvm install node
 
 npm install --global surge
-# TODO: install TypeScript?
+# TODO: install TypeScript compiler?
 # TODO: install gulp?
 # TODO: linters? prettier?
 
