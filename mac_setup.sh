@@ -27,6 +27,7 @@ brew cask install spectacle
 brew cask install alfred
 brew cask install vlc
 brew cask install slack
+brew cask install discord
 brew cask install spotify
 brew cask install steam
 brew cask install itch # this will also install butler cli
