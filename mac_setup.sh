@@ -68,6 +68,11 @@ curl https://raw.githubusercontent.com/rmkubik/dotfiles/.inputrc >> ~/.inputrc
 # configure SSH keys
 # TODO: setup work & personal keys
 
+# Add extensions to vs code
+code --install-extension dawhite.mustache
+code --install-extension dbaeumer.jshint
+code --install-extension eamodio.gitlens
+
 # style the terminal
 git clone https://github.com/lysyi3m/osx-terminal-themes ~/git/osx-terminal-themes/
 open AdventureTime.terminal # Shell > Use Settings as Default to save
