@@ -14,3 +14,9 @@
 - ⌥⌘' = snap window to top right corner
 - ⌥⌘. = snap window to bottom left corner
 - ⌥⌘/ = snap window to bottom right corner
+
+## Git aliases
+- co = checkout
+- ci = commit
+- st = status
+- br = branch
