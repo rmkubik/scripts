@@ -59,8 +59,9 @@ git config --global alias.br branch
 git config --global credential.helper osxkeychain
 
 # copy dotfiles from github
-git init --bare $HOME/.dotfiles
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+git clone --bare https://github.com/rmkubik/dotfiles.git $HOME/.dotfiles
+dotfiles checkout
+
 # curl ~/.ssh TODO
 # curl ~/.duti TODO
 # curl ~/.gitconfig instead or above --global commands? TODO
