@@ -1261,7 +1261,11 @@ _git_checkout ()
 		   [ -n "$(__git_find_on_cmdline "$flags")" ]; then
 			track_opt=''
 		fi
-		__git_complete_refs $track_opt
+		if [ "$command" = "checkoutr" ]; then
+		    __git_complete_refs $track_opt
+		else
+		    __gitcomp_nl "$(__git_heads '' $track)"
+		fi
 		;;
 	esac
 }
