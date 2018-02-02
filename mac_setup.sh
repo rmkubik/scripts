@@ -1,5 +1,6 @@
 # how to execute script
-# ./mac_setup.sh email@address.com
+# curl https://raw.githubusercontent.com/rmkubik/scripts/master/open-sites.sh | bash -s 'email@address.com'
+# ./mac_setup.sh 'email@address.com'
 
 # install xcode cli tools for homebrew
 xcode-select --install
