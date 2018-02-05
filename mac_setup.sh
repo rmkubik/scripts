@@ -80,6 +80,8 @@ git clone https://github.com/lysyi3m/osx-terminal-themes ~/git/osx-terminal-them
 open ~/git/osx-terminal-themes/schemes/AdventureTime.terminal # Shell > Use Settings as Default to save
 # TODO: Get the apple script for saving the theme
 
+# git clone the scripts directory
+
 # script for tab completion in git commands
 # curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
 # this should be in dotfiles repo now
