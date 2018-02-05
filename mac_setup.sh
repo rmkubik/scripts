@@ -100,6 +100,11 @@ defaults write com.apple.finder ShowStatusBar -bool true
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 # Minimize windows into their application’s icon
 defaults write com.apple.dock minimize-to-application -bool true
+# set dock autohide to true
+osascript -e "tell application \"System Events\" to set the autohide of the dock preferences to true"
+# set autohide dock delay and speed
+defaults write com.apple.dock autohide-delay -float 0.5
+defaults write com.apple.dock autohide-time-modifier -float 0.5
 # Bottom left screen corner → Put display to sleep
 defaults write com.apple.dock wvous-bl-corner -int 10
 # Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
