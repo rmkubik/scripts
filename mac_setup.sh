@@ -74,6 +74,7 @@ dotfiles checkout # cannot use dotfiles alias here
 code --install-extension dawhite.mustache
 code --install-extension dbaeumer.jshint
 code --install-extension eamodio.gitlens
+# save my editor preferences & workspaces
 
 # style the terminal
 git clone https://github.com/lysyi3m/osx-terminal-themes ~/git/osx-terminal-themes/
@@ -89,6 +90,8 @@ open ~/git/osx-terminal-themes/schemes/AdventureTime.terminal # Shell > Use Sett
 # start Spectacle and Alfred and give them permissions
 # set spotlight search shortcut to option space
 # set alfred shortcut to command space
+
+# set pinned chrome tabs & login to chrome
 
 # mac settings
 chflags nohidden ~/Library
