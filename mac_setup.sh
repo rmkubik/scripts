@@ -77,7 +77,7 @@ code --install-extension eamodio.gitlens
 
 # style the terminal
 git clone https://github.com/lysyi3m/osx-terminal-themes ~/git/osx-terminal-themes/
-open AdventureTime.terminal # Shell > Use Settings as Default to save
+open ~/git/osx-terminal-themes/schemes/AdventureTime.terminal # Shell > Use Settings as Default to save
 # TODO: Get the apple script for saving the theme
 
 # script for tab completion in git commands
