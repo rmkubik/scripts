@@ -61,7 +61,7 @@ git config --global credential.helper osxkeychain
 
 # copy dotfiles from github
 git clone --bare https://github.com/rmkubik/dotfiles.git $HOME/.dotfiles
-dotfiles checkout
+dotfiles checkout # cannot use dotfiles alias here
 
 # curl ~/.ssh TODO
 # curl ~/.duti TODO
@@ -81,7 +81,12 @@ open AdventureTime.terminal # Shell > Use Settings as Default to save
 # TODO: Get the apple script for saving the theme
 
 # script for tab completion in git commands
-curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
+# curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
+# this should be in dotfiles repo now
+
+# start Spectacle and Alfred and give them permissions
+# set spotlight search shortcut to option space
+# set alfred shortcut to command space
 
 # mac settings
 chflags nohidden ~/Library
