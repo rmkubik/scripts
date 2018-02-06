@@ -46,7 +46,9 @@ npm install --global surge
 # TODO: linters? prettier?
 
 # install rvm
-# TODO: setup ruby, any gems?
+\curl -sSL https://get.rvm.io | bash -s stable
+rvm install ruby-head
+# TODO: any gems?
 
 # configure git
 git config --global user.name "Ryan Kubik"
