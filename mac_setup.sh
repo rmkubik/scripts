@@ -46,7 +46,9 @@ npm install --global surge
 # TODO: linters? prettier?
 
 # install rvm
-# TODO: setup ruby, any gems?
+\curl -sSL https://get.rvm.io | bash -s stable
+rvm install ruby-head
+# TODO: any gems?
 
 # configure git
 git config --global user.name "Ryan Kubik"
@@ -74,6 +76,7 @@ dotfiles checkout # cannot use dotfiles alias here
 code --install-extension dawhite.mustache
 code --install-extension dbaeumer.jshint
 code --install-extension eamodio.gitlens
+# save my editor preferences & workspaces
 
 # style the terminal
 git clone https://github.com/lysyi3m/osx-terminal-themes ~/git/osx-terminal-themes/
@@ -90,6 +93,8 @@ open ~/git/osx-terminal-themes/schemes/AdventureTime.terminal # Shell > Use Sett
 # set spotlight search shortcut to option space
 # set alfred shortcut to command space
 
+# set pinned chrome tabs & login to chrome
+
 # mac settings
 chflags nohidden ~/Library
 sudo chflags nohidden /Volumes
@@ -100,6 +105,11 @@ defaults write com.apple.finder ShowStatusBar -bool true
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 # Minimize windows into their application’s icon
 defaults write com.apple.dock minimize-to-application -bool true
+# set dock autohide to true
+osascript -e "tell application \"System Events\" to set the autohide of the dock preferences to true"
+# set autohide dock delay and speed
+defaults write com.apple.dock autohide-delay -float 0.25
+defaults write com.apple.dock autohide-time-modifier -float 0.5
 # Bottom left screen corner → Put display to sleep
 defaults write com.apple.dock wvous-bl-corner -int 10
 # Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
