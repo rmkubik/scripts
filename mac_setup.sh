@@ -76,6 +76,8 @@ dotfiles checkout # cannot use dotfiles alias here
 code --install-extension dawhite.mustache
 code --install-extension dbaeumer.jshint
 code --install-extension eamodio.gitlens
+code --install-extension johob.pico8-vscode
+code --install-extension Tyriar.sort-lines
 # save my editor preferences & workspaces
 
 # style the terminal
