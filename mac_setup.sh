@@ -40,7 +40,8 @@ brew cask install itch # this will also install butler cli
 curl x https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
 nvm install node
 
-npm install --global surge
+# npm install --global surge
+npm install -g local-web-server
 # TODO: install TypeScript compiler?
 # TODO: install gulp?
 # TODO: linters? prettier?
