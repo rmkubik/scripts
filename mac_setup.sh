@@ -18,6 +18,7 @@ brew tap caskroom/cask
 # install applications
 brew install git
 brew install npm
+brew install jq
 # TODO: install python3
 
 brew cask install visual-studio-code
