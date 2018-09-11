@@ -4,3 +4,6 @@ cp -r $1 $2
 cd $2
 rm -rf node_modules
 rm -rf .git
+git init
+git add .
+git commit -m 'initial commit'"
