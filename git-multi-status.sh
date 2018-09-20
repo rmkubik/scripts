@@ -50,6 +50,15 @@ do
 			echo -en "\033[0m"
 		fi
 
+        # Check for unpushed changes
+        if [ $(git status | grep 'Your branch is ahead' -c) -ne 0 ]
+        then
+            mod=1
+            echo -en "\033[0;31m"
+            echo "Unpushed commit"
+            echo -en "\033[0m"
+        fi
+
 		# Check if everything is peachy keen
 		if [ $mod -eq 0 ]
 		then
