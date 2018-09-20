@@ -3,7 +3,8 @@
 # ./mac_setup.sh 'email@address.com'
 
 # install xcode cli tools for homebrew
-xcode-select --install
+# homebrew appears to install this on its own now
+# xcode-select --install
 
 # install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -17,7 +18,7 @@ brew tap caskroom/cask
 
 # install applications
 brew install git
-brew install npm
+# brew install npm # wait to install with nvm?
 brew install jq
 # TODO: install python3
 
