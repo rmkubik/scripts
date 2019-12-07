@@ -157,4 +157,8 @@ defaults write com.apple.controlstrip FullCustomized -array \
     "com.apple.system.group.volume"
 # Restart control strip to see new changes
 pkill "Touch Bar agent";                                      
-killall "ControlStrip";     
+killall "ControlStrip";
+# turn on battery percentage
+defaults write com.apple.menuextra.battery ShowPercent YES
+# restart SystemUI to show menu icons
+killall -KILL SystemUIServer
