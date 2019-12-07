@@ -7,17 +7,18 @@
 # xcode-select --install
 
 # install Homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # install & authenticate with mac app store cli
-brew install mas
-mas signin --dialog $1
+# brew install mas
+# mas signin --dialog $1
 
 # install graphical applications with homebrew
 brew tap caskroom/cask
 
 # install applications
-brew install git
+# git seems to be installed by default now?
+# brew install git 
 # brew install npm # wait to install with nvm?
 brew install jq
 # TODO: install python3
@@ -49,8 +50,8 @@ npm install -g local-web-server
 # TODO: linters? prettier?
 
 # install rvm
-\curl -sSL https://get.rvm.io | bash -s stable
-rvm install ruby-head
+# \curl -sSL https://get.rvm.io | bash -s stable
+# rvm install ruby-head
 # TODO: any gems?
 
 # configure git
@@ -76,16 +77,20 @@ dotfiles checkout # cannot use dotfiles alias here
 # TODO: setup work & personal keys
 
 # Add extensions to vs code
-code --install-extension dawhite.mustache
-code --install-extension dbaeumer.jshint
-code --install-extension eamodio.gitlens
-code --install-extension johob.pico8-vscode
-code --install-extension Tyriar.sort-lines
+# code --install-extension dawhite.mustache
+# code --install-extension dbaeumer.jshint
+# code --install-extension eamodio.gitlens
+# code --install-extension johob.pico8-vscode
+# code --install-extension Tyriar.sort-lines
 # save my editor preferences & workspaces
 
+# install oh my zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 # style the terminal
-git clone https://github.com/lysyi3m/osx-terminal-themes ~/git/osx-terminal-themes/
-open ~/git/osx-terminal-themes/schemes/AdventureTime.terminal # Shell > Use Settings as Default to save
+# This seems incorrect now that we're in ZSH land now?
+# git clone https://github.com/lysyi3m/osx-terminal-themes ~/git/osx-terminal-themes/
+# open ~/git/osx-terminal-themes/schemes/AdventureTime.terminal # Shell > Use Settings as Default to save
 # TODO: Get the apple script for saving the theme
 
 # git clone the scripts directory
