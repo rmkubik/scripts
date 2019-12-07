@@ -88,9 +88,8 @@ dotfiles checkout # cannot use dotfiles alias here
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # style the terminal
-# This seems incorrect now that we're in ZSH land now?
-# git clone https://github.com/lysyi3m/osx-terminal-themes ~/git/osx-terminal-themes/
-# open ~/git/osx-terminal-themes/schemes/AdventureTime.terminal # Shell > Use Settings as Default to save
+git clone https://github.com/lysyi3m/osx-terminal-themes ~/git/osx-terminal-themes/
+open ~/git/osx-terminal-themes/schemes/AdventureTime.terminal # Shell > Use Settings as Default to save
 # TODO: Get the apple script for saving the theme
 
 # git clone the scripts directory
