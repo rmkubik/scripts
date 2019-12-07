@@ -145,3 +145,16 @@ defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 # TODO: organize the dock applications and layout
 # Disable recently opened applications in Dock
 defaults write com.apple.dock show-recents -bool FALSE
+# Set default to expaded control strip 
+defaults write com.apple.touchbar.agent PresentationModeGlobal -string "fullControlStrip"
+# Set control strip values (to remove Siri from default control strip)
+defaults write com.apple.controlstrip FullCustomized -array \
+    "com.apple.system.group.brightness" \
+    "com.apple.system.mission-control" \
+    "com.apple.system.launchpad" \
+    "com.apple.system.group.keyboard-brightness" \
+    "com.apple.system.group.media" \
+    "com.apple.system.group.volume"
+# Restart control strip to see new changes
+pkill "Touch Bar agent";                                      
+killall "ControlStrip";     
