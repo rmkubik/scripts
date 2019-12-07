@@ -138,3 +138,5 @@ defaults write com.apple.screencapture type -string "png"
 # Disable “natural” (Lion-style) scrolling
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 # TODO: organize the dock applications and layout
+# Disable recently opened applications in Dock
+defaults write com.apple.dock show-recents -bool FALSE
