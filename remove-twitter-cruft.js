@@ -8,63 +8,32 @@
 // @grant        none
 // ==/UserScript==
 
-(function () {
-  "use strict";
+(function() {
+  'use strict';
 
-  // Choose selectors on page to hide
-  const targets = [
-    {
-      selector: '[aria-label*="trend" i]',
-      found: false,
-    },
-    {
-      selector: '[aria-label*="who to follow" i]',
-      found: false,
-    },
-    {
-      selector: '[aria-label*="lists" i]',
-      found: false,
-    },
-    {
-      selector: '[aria-label*="bookmarks" i]',
-      found: false,
-    },
-    {
-      selector: '[aria-label*="explore" i]',
-      found: false,
-    },
-  ];
-
-  // Select the node that will be observed for mutations
-  const targetNode = document.querySelector("body");
+      // Select the node that will be observed for mutations
+  const targetNode = document.querySelector('body');
 
   // Options for the observer (which mutations to observe)
   const config = { attributes: true, childList: true, subtree: true };
 
+
+  const targets = ['[aria-label*="trend" i]', '[aria-label*="who to follow" i]', '[aria-label*="explore" i]', '[aria-label*="bookmarks" i]', '[aria-label*="lists" i]'];
+
   // Callback function to execute when mutations are observed
-  const callback = function (mutationsList, observer) {
+  const callback = function(mutationsList, observer) {
     // Use traditional 'for loops' for IE 11
     for (let mutation of mutationsList) {
       targets.forEach((target) => {
-        const nodes = document.querySelectorAll(target.selector);
+        const targetedElements = document.querySelectorAll(target);
 
-        if (nodes.length > 0) {
-          nodes.forEach((node) => {
-            node.style.display = "none";
-            console.log(
-              `Remove Twitter Cruft hid selector: "${target.selector}"`
-            );
+        if (targetedElements.length > 0) {
+          targetedElements.forEach((node) => {
+            node.style.display = 'none';
+            console.log(`Remove Twitter Cruft hid selector: "${target}"`);
           });
-
-          target.found = true;
         }
       });
-
-      if (targets.every((target) => target.found)) {
-        console.log(`Remove Twitter Cruft hid all targeted selectors.`);
-        observer.disconnect();
-        break;
-      }
     }
   };
 
