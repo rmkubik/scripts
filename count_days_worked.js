@@ -4,6 +4,13 @@ const exec = util.promisify(require("child_process").exec);
 
 // git log --author="Ryan Kubik" --format="%cD" > commits.txt
 
+let author = process.argv[2];
+
+if (!process.argv[2]) {
+  console.log("No author specified, defaulting to all authors.");
+  author = "";
+}
+
 class DateMap {
   constructor() {
     this.dates = {};
@@ -37,22 +44,28 @@ class DateMap {
   toString() {
     return Object.entries(this.dates)
       .map(([date, commits]) => {
-        const formatter = new Intl.DateTimeFormat("en", {
-          year: "numeric",
-          month: "short",
-          day: "2-digit",
-        });
-
-        return `    ${formatter.format(new Date(date))}: ${commits} commits`;
+        return `    ${DateMap.formatDate(date)}: ${commits} commits`;
       })
       .join("\n");
+  }
+
+  static formatDate(date) {
+    const formatter = new Intl.DateTimeFormat("en", {
+      year: "numeric",
+      month: "short",
+      day: "2-digit",
+    });
+
+    return formatter.format(new Date(date));
   }
 }
 
 // git log --author="Ryan Kubik" --format="%cD" > commits.txt
 async function read() {
   const { stdout, stderr } = await exec(
-    `git log --author="${process.argv[2]}" --format="%cD" < /dev/tty`
+    `git log ${
+      author ? `--author="${process.argv[2]}"` : ""
+    } --format="%cD" < /dev/tty`
   );
 
   if (stderr) {
@@ -71,13 +84,18 @@ async function read() {
   });
 
   console.log(`
-    For Author: ${process.argv[2]}
+    For Author: ${author || "all"}
 
     Total Days: ${Object.keys(dates.dates).length}
     Total Commits: ${Object.values(dates.dates).reduce(
       (count, commits) => count + commits,
       0
     )}
+
+    First Day: ${DateMap.formatDate(
+      Object.keys(dates.dates)[Object.keys(dates.dates).length - 1]
+    )}
+    Most Recent Day: ${DateMap.formatDate(Object.keys(dates.dates)[0])}
 ${process.argv[3] === "showDates" ? `\n${dates.toString()}\n` : ""}`);
 }
 
