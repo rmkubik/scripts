@@ -1,0 +1,23 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "description": "A collection of scripts",
+  "main": "audit-log.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmkubik/scripts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rmkubik/scripts/issues"
+  },
+  "homepage": "https://github.com/rmkubik/scripts#readme",
+  "dependencies": {
+    "get-stdin": "^9.0.0",
+    "simple-git": "^2.38.0"
+  }
+}
