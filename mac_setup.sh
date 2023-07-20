@@ -14,7 +14,7 @@
 # mas signin --dialog $1
 
 # install graphical applications with homebrew
-brew tap caskroom/cask
+# brew tap caskroom/cask
 
 # install applications
 # git seems to be installed by default now?
