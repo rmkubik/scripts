@@ -1,7 +1,7 @@
 # $1 == source directory path, first parameter
 # $2 == destination directory path, second parameter
 # Can use -n flag on rsync to verify copy before executing
-rsync -a --progress $1/ $2/ --exclude node_modules/ --exclude .git/
+rsync -a --progress $1/ $2/ --exclude node_modules/ --exclude .git/ --exclude .parcel-cache
 cd $2
 git init
 git add .
