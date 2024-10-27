@@ -14,7 +14,7 @@
 # mas signin --dialog $1
 
 # install graphical applications with homebrew
-brew tap caskroom/cask
+# brew tap caskroom/cask
 
 # install applications
 # git seems to be installed by default now?
@@ -44,7 +44,7 @@ curl x https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bas
 nvm install node
 
 # npm install --global surge
-npm install -g local-web-server
+# npm install -g local-web-server
 # TODO: install TypeScript compiler?
 # TODO: install gulp?
 # TODO: linters? prettier?
@@ -55,19 +55,19 @@ npm install -g local-web-server
 # TODO: any gems?
 
 # configure git
-git config --global user.name "Ryan Kubik"
-git config --global user.email $1
-git config --global color.ui "true"
-git config --global push.default simple
-git config --global alias.co checkout
-git config --global alias.cm commit
-git config --global alias.st status
-git config --global alias.br branch
-git config --global credential.helper osxkeychain
+# git config --global user.name "Ryan Kubik"
+# git config --global user.email $1
+# git config --global color.ui "true"
+# git config --global push.default simple
+# git config --global alias.co checkout
+# git config --global alias.cm commit
+# git config --global alias.st status
+# git config --global alias.br branch
+# git config --global credential.helper osxkeychain
 
 # copy dotfiles from github
-git clone --bare https://github.com/rmkubik/dotfiles.git $HOME/.dotfiles
-dotfiles checkout # cannot use dotfiles alias here
+# git clone --bare https://github.com/rmkubik/dotfiles.git $HOME/.dotfiles
+# dotfiles checkout # cannot use dotfiles alias here
 
 # curl ~/.ssh TODO
 # curl ~/.duti TODO
