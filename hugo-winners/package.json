@@ -1,0 +1,16 @@
+{
+  "name": "hugo-winners",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "tsx count.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tsx": "^4.23.15",
+    "zx": "^8.8.5"
+  }
+}
